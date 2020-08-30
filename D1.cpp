@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-	int y,n;
+	int y;
 	printf("DO YOU LOVE ME !!!\n");
 	printf("YES Press 6 / NO Press 9 : ");
 	scanf("%d", &y);
