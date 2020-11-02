@@ -3,19 +3,29 @@
 int main()
 {
 long long int lm;
-scanf("%d" , &lm);
+scanf("%lld" , &lm);
 int a=1, b=1,sum=0, h;
-while (b<lm)
-{
-    if(b % 2==0)
+if(lm % 2 != 0)
     {
-        sum = sum+b;
+        printf("Please put event num");
     }
-    h=a+b;
-    a=b;
-    b=h;
+else if(lm/2 <= 1)
+    {
+        printf("put num > 2");
+    }
+else
+{
+    while (b<lm)
+    {
+        if(b % 2==0)
+        {
+            sum = sum+b;
+        }
+        h=a+b;
+        a=b;
+        b=h;
+    }
+    printf("%lld" , sum);
 }
-printf("%lld" , sum);
-
 return 0;
 }
