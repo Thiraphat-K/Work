@@ -14,13 +14,13 @@ return 0;
 void fib(int*Plm)
 {
     int a=1, b=1,sum=0, h;
-    if(*Plm % 2 != 0)
-    {
-        printf("Please put event num");
-    }
-else if(*Plm /2 <= 1)
+    if(*Plm < 0 || *Plm <= 2)
     {
         printf("put num > 2");
+    }
+else if(*Plm % 2 != 0)
+    {
+        printf("Please put event num");
     }
 else
 {
