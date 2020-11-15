@@ -1,26 +1,40 @@
 #include<stdio.h>
+void lpn(int*);
+void getInt(int*);
 
 int main()
 {
-    long long int n;
-    scanf("%lld" ,&n);
+    int n[100];
+    int *pn = n;
+    getInt(pn);
+    lpn(pn);
+    return 0;
+}
+
+void lpn(int*pn)
+{
     int ln = 0;
-    if(n>1000000000)
+    if(*pn <= 4000000000 && *pn > 1000000)
     {
-    for(int i=2;n!=1;++i)
-    {
-        while ( n%i==0 )
+        for(int i=2;*pn!=1;i++)
         {
-            n/=i;
-            ln=i;
+            while ( *pn%i==0 )
+            {
+                *pn/=i;
+                ln=i;
+            }
         }
-        
+        printf("%d" , ln);
     }
-    printf("%lld" , ln);
+    else if(*pn < 1000000){
+        printf("Be put num > 1 million");
     }
     else{
-        printf("Be put num > 1 billion");
+        printf("Be put num < 4 billion");
     }
-    
-    return 0;
+}
+
+void getInt(int *pm)
+{
+    scanf("%d",pm);
 }
