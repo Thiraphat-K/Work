@@ -3,7 +3,7 @@ int rPld(int n);
 
 int main()
 {
-  int largePld = 0;
+  int largePld ;
   int x = 999, y, dy;
   while(x>=100)
   {
