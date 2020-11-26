@@ -34,7 +34,7 @@ else
         a=b;
         b=h;
     }
-    printf("%lld" , sum);
+    printf("%d" , sum);
 }
 }
 
