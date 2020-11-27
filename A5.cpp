@@ -1,4 +1,5 @@
 #include <stdio.h>
+void getipn(int*);
 
 int sqr(int x) {
   return x * x;
@@ -21,7 +22,13 @@ int p_find_trip(int final_sum) {
 }
 
 int main() {
-    int ip;
-    scanf("%d",&ip);
-    return p_find_trip(ip);
+    int ip[100];
+    int* ipp = ip;
+    getipn(ipp);
+    return p_find_trip(*ipp);
+}
+
+void getipn(int* ipn)
+{
+  scanf("%d", ipn);
 }
